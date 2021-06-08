@@ -1,0 +1,58 @@
+############################################## 自定义配置（开始）#############################################
+globalConfig:
+  prefixOfApi: /api/v1
+
+#数据库配置
+database-server:
+  ip: 127.0.0.1
+  port: 3306
+  dbname: cet-dev-portal
+  uname: root
+  passwd: Cet123!@#
+
+############################################## 自定义配置（结束）#############################################
+
+############################################## spring配置（开始）############################################
+############################################## 以下内容请勿动################################################
+
+#服务端监听端口
+server:
+  port: 10081
+  tomcat:
+    uri-encoding: utf-8
+
+#数据库源配置
+spring:
+  datasource:
+    druid:
+      # 数据库访问配置, 使用druid数据源
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://${database-server.ip}:${database-server.port}/${database-server.dbname}?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+      username: ${database-server.uname}
+      password: ${database-server.passwd}
+
+  #出现错误时, 直接抛出异常
+  mvc:
+    throw-exception-if-no-handler-found: true
+  #不要为工程中的资源文件建立映射，RESTFUL服务需要配置
+  resources:
+    add-mappings: false
+
+
+mybatis:
+  # mybatis配置
+  config-location: classpath:config/mybatis/mybatis-config.xml
+  # mapper xml实现扫描路径
+  mapper-locations: classpath:config/mybatis/mapper/*.xml
+
+
+mapper:
+  mappers: com.cet.devportal.base.dao.BaseDAO
+
+#日志配置文件
+logging:
+  config: classpath:config/log/logback-debug.xml
+
+
+############################################## spring配置（结束）###########################################

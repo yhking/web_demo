@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    #可输入：debug(调试版本)、dev(研发版本)、test(中试版本)、prod(发布版本)
+    active: debug
+

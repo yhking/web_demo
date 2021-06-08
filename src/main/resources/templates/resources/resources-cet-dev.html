@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+</head>
+
+<body>
+<div th:insert="~{comm/header::title}"></div>
+
+    <h1 th:text="CET-DEV最新版本"></h1>
+    <!--<a href="/resources/cet-dev/download?name=cet-dev-v2.1.0.exe" methods="get" >cet-dev-v2.1.0.exe</a>-->
+    <a href="/resources/demander?archive=cetdev-install-v2.1.0.exe" methods="get" >cetdev-install-v2.1.0.exe</a>
+    <h1 th:text="CET-DEV历史版本"></h1>
+    <!--<a href="/resources/cet-dev/download?name=cet-dev-v1.0.0.exe" methods="get">cet-dev-v1.0.0.exe</a>-->
+    <a href="/resources/demander?archive=cetdev-install-v1.0.0.exe" methods="get">cetdev-install-v1.0.0.exe</a>
+
+<div th:insert="~{comm/footer::copyright}"></div>
+
+</body>
+</html>

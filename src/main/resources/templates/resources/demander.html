@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:insert="~{comm/header::title}"></div>
+
+<h1 th:text="申请人信息"/>
+<form action="/resources/demander" method="post" enctype="application/x-www-form-urlencoded">
+    姓名（1-20字符）: <input type="text" id="name" name="name"/><br/>
+    公司/企业（1-50字符）:<input type="text" id="company" name="company"/><br/>
+    邮箱（标准邮箱格式）:<input type="text" id="emailAddress" name="mailbox"/><br/>
+    手机号（11位）:<input type="text" id="phoneNum" name="phone"/><br/>
+    <!--Download Archive:<input type="text" th:value="${archiveId}" name="archiveId">-->
+    <input type="hidden" th:value="${archive}" name="archive">
+    <input type="submit" class="medium button" th:value="${archive}"/>
+    <a href="/" class="medium button">取消</a>
+</form>
+
+<div th:insert="~{comm/footer::copyright}"></div>
+
+</body>
+</html>

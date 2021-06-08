@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+</head>
+<body>
+
+<div  th:insert="~{comm/header::title}"></div>
+
+<a href="/resources/cet-dev" methods="get">CET-DEV</a>
+<a href="/resources/pmc-easyconfig" methods="get">PMC-EasyConfig</a>
+<a href="/resources/pmc-easycom" methods="get" >PMC-EasyCom</a>
+
+<div  th:insert="~{comm/footer::copyright}"></div>
+</body>
+</html>

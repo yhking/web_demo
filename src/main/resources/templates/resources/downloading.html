@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+</head>
+
+<body>
+<div class="header" th:insert="~{comm/header::title}"></div>
+
+<h1 th:text="下载中..."></h1>
+<p th:text="如果没有启动下载，请点击"/>
+<a th:href="'/resources/download?archiveId='+${archiveId}" methods="get">重试</a>
+<p th:text="不要等了，还没加主动请求的代码"/>
+<div class="footer" th:insert="~{comm/footer::copyright}"></div>
+
+</body>
+</html>

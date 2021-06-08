@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases >
+        <typeAlias type="com.cet.devportal.domain.Demander" alias="Demander"/>
+        <typeAlias type="com.cet.devportal.domain.Archive" alias="Archive"/>
+    </typeAliases>
+	<!--<settings>-->
+		<!--&lt;!&ndash;解决插入null的时候报错问题&ndash;&gt;-->
+		<!--<setting name="" value="NULL"/>-->
+	<!--</settings>-->
+</configuration>

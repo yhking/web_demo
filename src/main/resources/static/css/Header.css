@@ -1,0 +1,68 @@
+.global-header{
+    height: 64px;
+    line-height: 64px;
+    width: 100%;
+    z-index: 9999;
+}
+
+.global-header-content{
+    position: fixed;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+}
+
+.global-header-logoContainer
+{
+    float: left;
+}
+.global-header-logo
+{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #0f0;
+}
+
+.global-header-name
+{
+    font-size: 13pt;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #0f0;
+}
+
+.global-header-title
+{
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+.global-header-nav
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+
+.global-header-nav li
+{
+    padding: 0 20px;
+}
+
+.global-header-nav li a
+{
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.8);
+}
+
+.global-header-nav li a:hover
+{
+    color:rgba(0, 0, 0, 1);
+}
+.global-header-nav li a:active
+{
+    color:rgba(0, 255, 0, 0.5);
+}
